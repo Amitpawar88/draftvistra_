@@ -12,6 +12,8 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
+import Constant from "@/app/_constant.tsx/Constant";
+import PricingDialog from "./PricingDailog";
 
 function SideNavBottomSection({ onFileCreate, totalFiles }: any) {
   const menuList = [
@@ -52,7 +54,7 @@ function SideNavBottomSection({ onFileCreate, totalFiles }: any) {
             New File
           </Button>
         </DialogTrigger>
-        <DialogContent>
+        {totalFiles<Constant.MAX_FREE_FILE? <DialogContent>
           <DialogHeader>
             <DialogTitle>Create New File</DialogTitle>
             <DialogDescription>
@@ -75,7 +77,7 @@ function SideNavBottomSection({ onFileCreate, totalFiles }: any) {
               </Button>
             </DialogClose>
           </DialogFooter>
-        </DialogContent>
+        </DialogContent>: <PricingDialog /> }
       </Dialog>
 
       {/* Progress Bar */}
@@ -87,7 +89,7 @@ function SideNavBottomSection({ onFileCreate, totalFiles }: any) {
       </div>
 
       <h2 className="text-[12px] mt-3">
-        <strong>{totalFiles}</strong> out of <strong>5</strong> files used
+        <strong>{totalFiles}</strong> out of <strong>{Constant.MAX_FREE_FILE}</strong> files used
       </h2>
       <h2 className="text-[12px] mt-1">
         Upgrade your plan for unlimited access.
