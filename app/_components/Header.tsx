@@ -20,70 +20,19 @@ function Header() {
 
         <div className="flex flex-1 items-center justify-end md:justify-between">
           <nav aria-label="Global" className="hidden md:block">
-            <ul className="flex items-center gap-6 text-sm">
-              <li>
-                <a
-                  className="text-white transition hover:text-gray-100"
-                  href="#"
-                >
-                  {" "}
-                  About{" "}
-                </a>
-              </li>
-
-              <li>
-                <a
-                  className="text-white transition hover:text-gray-100/75"
-                  href="#"
-                >
-                  {" "}
-                  Careers{" "}
-                </a>
-              </li>
-
-              <li>
-                <a
-                  className="text-white transition hover:text-gray-100/75"
-                  href="#"
-                >
-                  {" "}
-                  History{" "}
-                </a>
-              </li>
-
-              <li>
-                <a
-                  className="text-white transition hover:text-gray-100/75"
-                  href="#"
-                >
-                  {" "}
-                  Services{" "}
-                </a>
-              </li>
-
-              <li>
-                <a
-                  className="text-white transition hover:text-gray-100/75"
-                  href="#"
-                >
-                  {" "}
-                  Projects{" "}
-                </a>
-              </li>
-            </ul>
           </nav>
 
           <div className="flex items-center gap-4">
             <div className="sm:flex sm:gap-4">
               <a
-                className="block rounded-md  px-5 py-2.5 text-sm font-medium text-white transition"
+                className="block rounded-md px-5 py-2.5 text-sm font-medium text-white transition border border-transparent hover:border-white"
                 href="#"
               >
                 <LoginLink postLoginRedirectURL="/dashboard" > Login</LoginLink>
               </a>
 
               <a
-                className="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-mediumtext-black transition hover:text-slate-800 sm:block"
+                className="hidden sm:block rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-black transition duration-200 ease-in-out hover:text-gray-800 hover:bg-gray-200"
                 href="#"
               >
                 <RegisterLink>Register</RegisterLink>
